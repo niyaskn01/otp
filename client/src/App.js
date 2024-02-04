@@ -11,8 +11,8 @@ function App() {
     <>
     <Toaster/>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path='/login' element={<Login/>}/>
+      <Route path="/home" element={<Home />} />
+      <Route path='/' element={<Login/>}/>
       <Route path='/otp' element={<Otp/>}/>
       <Route path='/register' element={<Register/>}/>
     </Routes>

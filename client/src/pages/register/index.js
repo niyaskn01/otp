@@ -22,7 +22,7 @@ const navigate=useNavigate()
     try {
       const {data}=await axiosInstance.post('/user/register',inputData)
       if(data.success){
-        navigate('/login')
+        navigate('/')
         toast.success(data.message)
       }else{
         toast.error(data)
@@ -40,7 +40,7 @@ const navigate=useNavigate()
         <InputItem name='password' type='password' placeholder='enter password' onChange={handleChange}/>
         <FormButton onClick={handleClick} variant='contained'>Login</FormButton>
         <Typography sx={{margin:'20px'}} variant='subtitle1'>
-        Allready a user <Link to='/login'>login</Link>
+        Allready a user <Link to='/'>login</Link>
         </Typography>
       </FormBox>
     </FormContainer>

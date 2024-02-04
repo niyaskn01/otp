@@ -22,7 +22,7 @@ function Otp() {
     try {
       const {data}=await axiosInstance.post('/user/login',{email,otp})
       if(data.success){
-        navigate('/')
+        navigate('/home')
         toast.success('welcome')
       }else{
         toast.error(data.message)
