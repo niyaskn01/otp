@@ -54,8 +54,8 @@ function Otp() {
   useEffect(()=>{
     if(email===''){
       navigate('/login')
-    }
-  },[email])
+    } 
+  },[email,navigate])
   return (
     <FormContainer>
     <FormBox>
