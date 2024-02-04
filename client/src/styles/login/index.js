@@ -33,7 +33,6 @@ export const FormTitle=styled(Typography)(({theme})=>({
   fontFamily:'"montez","cursive"',
   margin:10,
   [theme.breakpoints.down('md')]:{
-    fontWeight:400,
     fontSize:'25px',
   }
 })) 
