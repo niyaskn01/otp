@@ -14,29 +14,36 @@ export const FormContainer=styled(Box)(()=>({
   background:colors.secondary
 }))
 
-export const FormBox=styled(Box)(()=>({
-  // box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+export const FormBox=styled(Box)(({theme})=>({
   boxShadow: `${colors.primary} 0px 3px 3px 0px` ,
   width:'40%',
   background:colors.gray,
   display:'flex',
   alignItems:'center',
   flexDirection:'column',
-  // boxShadow:`3px 2px 15px 1px ${colors.primary},-3px -2px 15px 1px ${colors.primary}`
+  [theme.breakpoints.down('md')]:{
+    width:'90%'
+  }
 }))
 
-export const FormTitle=styled(Typography)(()=>({
+export const FormTitle=styled(Typography)(({theme})=>({
   fontWeight:600,
   fontSize:'50px',
   color:colors.primary,
-  // color:'red',
   fontFamily:'"montez","cursive"',
-  margin:10
+  margin:10,
+  [theme.breakpoints.down('md')]:{
+    fontWeight:400,
+    fontSize:'25px',
+  }
 })) 
 
 export const InputItem=styled(TextField)(({theme})=>({
   marginTop:15,
-  width:'80%'
+  width:'80%',
+  [theme.breakpoints.down('md')]:{
+    marginTop:5,
+  }
 }))
 
 export const FormButton=styled(Button)(()=>({
@@ -45,10 +52,13 @@ export const FormButton=styled(Button)(()=>({
   marginTop:15
 }))
 
-export const AppbarHeader=styled(Typography)(()=>({
+export const AppbarHeader=styled(Typography)(({theme})=>({
   padding:'4px',
   flexGrow:1,
   fontSize:'4em',
   fontFamily:"'Montez','cursive'",
-  color:colors.secondary
+  color:colors.secondary,
+  [theme.breakpoints.down('md')]:{
+    fontSize:'3em',
+  }
 }))
